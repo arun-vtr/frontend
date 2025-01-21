@@ -1,0 +1,219 @@
+body {
+    background-color: #eef1f4;
+    font-family: system-ui;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 50px;
+}
+
+header .shopping {
+    position: relative;
+    text-align: right;
+}
+header .shopping img {
+    width: 40px;
+}
+
+header .shopping span {
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
+.list .item {
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+}
+
+.list img {
+    width: 100%;         /* Make the image take up the full width of its container */
+    height: 200px;       /* Set a fixed height */
+    object-fit: cover;   /* Ensure the image covers the area */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+.card {
+    position: fixed;
+    top: 0;
+    right: -500px; /* Initial position off-screen */
+    width: 500px;
+    height: 100vh;
+    background-color: #453E3B;
+    transition: right 0.5s; /* Smooth transition for visibility */
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.card.active {
+    right: 0; /* Position on-screen when active */
+}
+
+.card h1 {
+    color: #E8BC0E;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.card .content {
+    flex: 1; /* Grow to take available space */
+    overflow-y: auto; /* Scrollable if content overflows */
+}
+
+.card .checkout {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1C1F25;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card .total-amount {
+    background-color: #E8BC0E;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card .checkout div {
+    background-color: #E8BC0E;
+    width: 100px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card .checkout div:nth-child(2) {
+    background-color: #1C1F25;
+    color: #fff;
+}
+
+body.active .card {
+    right: 0; /* Ensure the card slides in from the right */
+}
+
+body.active .container {
+    transform: translateX(-200px);
+}
+
+
+
+.list .item img {
+    width: 90%;
+}
+
+.list .item .title {
+    font-weight: 600;
+}
+
+.list .item .price {
+    margin: 10px;  /* Corrected margin */
+}
+
+.list .item button {
+    color: #fff;
+    background-color: #1C1F25;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Style for cart items */
+.listcard li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #757676;  /* Dark background for visibility */
+    border-radius: 10px;         /* Rounded corners for better appearance */
+}
+
+.listcard li img {
+    width: 70px;               /* Fixed width for consistency */
+    height: 70px;              /* Fixed height for consistency */
+    object-fit: cover;         /* Cover the area while maintaining aspect ratio */
+    border-radius: 5px;        /* Rounded corners on the image */
+    flex-shrink: 0;            /* Prevent the image from shrinking */
+}
+
+.listcard .details{
+    flex-grow: 1;              /* Allow the text details to take up available space */
+    margin-left: 15px;         /* Add space between the image and text */
+    color: #fff;
+    display: flex;
+    flex-direction: column;    /* Stack the product name and price */
+}
+
+.listcard .count-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listcard button {
+    background-color: #E8BC0E;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    margin: 0 5px;             /* Spacing between buttons */
+}
+
+.listcard .count {
+    text-align: center;
+    color: #fff;
+    width: 30px;               /* Set width for count display to maintain size */
+}
+
+/* Add some overall cart styling for better layout */
+.card {
+    overflow-y: auto;          /* Allow vertical scrolling if content overflows */
+    padding: 20px;             /* Padding around the card content */
+    box-sizing: border-box;    /* Ensure padding is included in the card's total size */
+}
+
+.cart-img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 5;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    font-family: sans-serif;
+}
+
+h3 {
+    background-color: rgb(12, 12, 12);
+    border-radius: 9px;
+    color: rgb(240, 231, 231);
+    font-style: italic;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #0c0c0c;
+    padding: 10px;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+form {
+    background-color: #1c1d1e;
+    width: 100%;
+    max-width: 300px;
+    height: 43px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    all: unset;
+    font: 15px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.column {
+    flex: 1 1 25%;
+    max-width: 25%;
+    padding: 10px;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    background-color: #151f30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3:hover {
+    color: gray;
+}
+
+a {
+    border: dotted yellow;
+    background-color: rgb(18, 4, 4);
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.mail a {
+    color: white;
+    border: none;
+    background-color: #151f30;
+    padding: 10px;
+}
+@media screen and (max-width: 1200px) {
+    .column {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .column {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .column {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

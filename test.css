@@ -1,0 +1,37 @@
+body{
+    background-color:white;
+}
+.search{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    width: 30pxpx;
+    height: 30px;
+    align-items: center;
+    border-radius:30px ;
+    overflow: hidden;
+    box-shadow: insert 0  5px 5px #ced0df,
+    0 -5px 10px #f3f3f3,
+    insert 0 -5px 5px #eff1f0,
+    0 10px 15px #cdd4de;
+}
+i{
+    padding: 4px;
+    color: #697B89;
+}
+input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100px;
+    padding: 0 20px;
+    transform: translate(-50px);
+}
+.search:focus-within{
+    width:200px;
+}
+.search:focus-within input{
+    transform: translate(0px);
+}
